@@ -29,6 +29,7 @@ public class UserDaoImp implements UserDao {
    }
 
    @Override
+   //Можно сделать вариант с листом, в ТЗ было написано "Юзера", поэтому такой вариант
    public User getUserByCar(String carModel, int carSeries) {
       Query query=sessionFactory.getCurrentSession().createQuery
               ("from User where car.model = :model and car.series = :series");
